@@ -2,8 +2,9 @@
 def compare(a,b):
     if a > b:
         return a
-    if a < b:
-        return b
+    return b
+
+
 x = int(input("Введите первое число для сравнения: "))
 y = int(input("Введите второе число для сравнения: "))
 compare(x,y)
