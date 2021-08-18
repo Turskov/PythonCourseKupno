@@ -38,7 +38,7 @@ class shuffler: #имя класса с большой буквы
         os.rename(path + '/' + hashname, path + '/' + self.map[hashname]))
         os.remove(restore_path)
 
-    def generateName(self, seed=time()):  #generate_name
+    def generateName(self, seed=time()):  # generate_name
         return hashlib.md5(str(seed)).hexdigest()
 
 
@@ -57,16 +57,20 @@ def parse_arguments():
 
 def main():
     args = parse_arguments()
-    Shuffler = shuffler()  #функция Shuffler должна быть с маленькой буквы
+    shuffler = Shuffler()  # переменная Shuffler должна быть с маленькой буквы
     if args.subcommand == 'rename':
         if args.output:
-            Shuffler.rename(args.dirname, 'restore.info')
+            shuffler.rename(args.dirname, 'restore.info')
         else:
-            Shuffler.rename(args.dirname, args.output)
+            shuffler.rename(args.dirname, args.output)
     elif args.subcommand == 'restore':
-        Shuffler.restore(args.dirname, args.restore_map)
+        shuffler.restore(args.dirname, args.restore_map)
     else:
         sys.exit()
 
 
+<<<<<<< HEAD
 main()
+=======
+main()
+>>>>>>> 1c336e6c544c35bb13706cdafb668db8fa98067d
