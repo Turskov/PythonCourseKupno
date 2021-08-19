@@ -12,7 +12,7 @@ class Tank:
 
     def re_color_green(self):
         if self.color == 'green':
-            print('Покраска танка в зеленый не требуется')
+            print('Покраска танка в зеленый не требуется') # В этом случае функция вернет None
         else:
             self.color = 'green'
             print('Покраска танка в зеленый завершена')
