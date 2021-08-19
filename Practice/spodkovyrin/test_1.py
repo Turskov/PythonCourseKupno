@@ -69,8 +69,4 @@ def main():
         sys.exit()
 
 
-<<<<<<< HEAD
 main()
-=======
-main()
->>>>>>> 1c336e6c544c35bb13706cdafb668db8fa98067d
